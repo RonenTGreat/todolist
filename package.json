@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ronen hammond",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonenTGreat/todolist-v1.git"
+  },
+  "author": "Ronen Hammond",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonenTGreat/todolist-v1/issues"
+  },
+  "homepage": "https://github.com/RonenTGreat/todolist-v1#readme",
   "dependencies": {
     "body-parser": "^1.19.1",
     "ejs": "^3.1.6",
