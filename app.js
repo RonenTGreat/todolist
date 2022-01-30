@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const { redirect } = require("express/lib/response");
+const e = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -54,14 +55,23 @@ app.post("/", (req, res) => {
   const itemName = req.body.newItem;
 
   const item = new Item({
-    name: itemName
+    name: itemName,
   });
 
   item.save();
 
-  res.redirect('/');
+  res.redirect("/");
+});
 
-  
+app.post("/delete", (req, res) => {
+  const checkedItemId =  req.body.checkbox;
+
+  Item.findByIdAndRemove(checkedItemId, function(err){
+    if(!err){
+      console.log("Successfully removed checked item.")
+      res.redirect("/");
+    }
+  });
 });
 
 app.get("/work", (req, res) => {
