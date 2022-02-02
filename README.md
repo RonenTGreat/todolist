@@ -32,6 +32,10 @@ npm i
 node app.js
 ```
 
+## Live Site
+
+<https://protected-everglades-62065.herokuapp.com/>
+
 ## Built With
 
 - HTML
@@ -44,6 +48,3 @@ node app.js
 
 - Backend on Heroku
 - Database on MongoDB Atlas
-
-## How it looks
-
